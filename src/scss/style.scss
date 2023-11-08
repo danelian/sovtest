@@ -1,0 +1,63 @@
+/***** FONTS *****/
+@import "fonts";
+
+/***** GENERAL ELEMENTS *****/
+:root {
+  // base
+  --content-width: 1160px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white-color: #ffffff;
+  --black-color: #131313;
+  --lightBlack-color: #292932;
+  --font-color: #131313;
+
+  --global-color: #E88320;
+  // --green-color: #8BD27C;
+  // --red-color: #FF3D00;
+}
+
+/***** Mixins *****/
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin desktop {
+  @media screen and (max-width: 1190px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+
+/***** BLOCKS GLOBAL *****/
+@import "general";
+@import "blocks/buttons";
+@import "blocks/title";
+
+
+/***** COMPONENTS GLOBAL *****/
+@import "blocks/header";
+// @import "blocks/footer";
+// @import "blocks/breadcrumbs";
+// @import "blocks/pagination";
+// @import "blocks/tags";
+// @import "blocks/accordion";
+// @import "blocks/tabs";
+// @import "blocks/article";
+// @import "blocks/sliders";
+// @import "blocks/form";
+
+/***** SECTIONS GLOBAL (Widgets) *****/
