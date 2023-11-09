@@ -4,17 +4,19 @@
 /***** GENERAL ELEMENTS *****/
 :root {
   // base
-  --content-width: 1160px;
-  --container-offset: 15px;
+  --content-width: 1780px;
+  --container-offset: 3.646vw;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --white-color: #ffffff;
   --black-color: #131313;
-  --lightBlack-color: #292932;
-  --font-color: #131313;
+  --font-color: #1e1e1e;
 
-  --global-color: #E88320;
+  --lightGray-color: #f4f4f4;
+  --gray-color: #9c9c9c;
+
+  --global-color: #ed1d24;
   // --green-color: #8BD27C;
   // --red-color: #FF3D00;
 }
@@ -61,3 +63,4 @@
 // @import "blocks/form";
 
 /***** SECTIONS GLOBAL (Widgets) *****/
+@import "widgets/main.scss";
