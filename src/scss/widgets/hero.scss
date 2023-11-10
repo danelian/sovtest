@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: calc(60% - 25px);
+    width: calc(60% - 1.250vw);
   }
   &__content {
     position: relative;
@@ -108,7 +108,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: calc(40% - 25px);
+    width: calc(40% - 1.250vw);
   }
-  
+
 }
