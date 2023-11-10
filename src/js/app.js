@@ -1,17 +1,83 @@
 $(document).ready(function () {
+  // VARS
+  const body = document.querySelector('body');
+  const header = document.getElementById('header');
+
+  // ------ Padding top for sections on Desktop ------
+  if (window.innerWidth >= 1025) {
+    const headerHeight = header.offsetHeight;
+    const elements = document.querySelectorAll('.vertical-scrolling');
+    elements.forEach(element => {
+      element.style.paddingTop = headerHeight + 'px';
+    });
+  }
+
+  // ---------------- HEADER MOBILE ------------------
+  if (window.innerWidth <= 1024) {
+    const scrollHeader = () => {
+      const header = document.getElementById('header');
+      if (window.scrollY >= 100) {
+        header.classList.add('active');
+      } else {
+        header.classList.remove('active');
+      }
+    };
+    window.addEventListener('scroll', scrollHeader);
+  }
+
+  // ------------------ FULL PAGE --------------------
+  if (window.innerWidth >= 1025) {
+    $('#fullpage').fullpage({
+      sectionSelector: '.vertical-scrolling',
+      navigation: true,
+      slidesNavigation: true,
+      controlArrows: false,
+      anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
+      menu: '#menu',
+
+      afterLoad: function(anchorLink, index, origin, destination, direction) {
+        if (destination.anchor !== 'firstSection') {
+          $('#header').addClass('active');
+        } else {
+          $('#header').removeClass('active');
+        }
+      },
+    });
+  }
 
   // -------------------- MAIN GRID ----------------------
   var mainCards = document.querySelector('.main__cards');
-  var mainCardsArray = mainCards.querySelectorAll('.main-card.one, .main-card.two, .main-card.three, .main-card.four, .main-card.five');
-  mainCardsArray.forEach(function(element) {
-    element.addEventListener('mouseover', function() {
-      mainCards.classList.add(element.classList[1]);
+  if (mainCards) {
+    var mainCardsArray = mainCards.querySelectorAll('.main-card.one, .main-card.two, .main-card.three, .main-card.four, .main-card.five');
+    mainCardsArray.forEach(function(element) {
+      element.addEventListener('mouseover', function() {
+        mainCards.classList.add(element.classList[1]);
+      });
+      element.addEventListener('mouseout', function() {
+        mainCards.classList.remove(element.classList[1]);
+      });
     });
-    element.addEventListener('mouseout', function() {
-      mainCards.classList.remove(element.classList[1]);
-    });
-  });
+  }
 
+  // ------------------- BURGER MENU ---------------------
+  const burgerMenu = document.getElementById('burger-menu'),
+        burgerOpen = document.getElementById('burger-open'),
+        burgerClose = document.getElementById('burger-close'),
+        burgerLinks = document.querySelectorAll('.burger__menu>ul>li>a, .burger__menu .nav__links a')
+  burgerOpen.addEventListener('click', () => {
+    burgerMenu.classList.add('open-menu');
+    body.classList.add('dis-scroll');
+  })
+  burgerClose.addEventListener('click', () => {
+    burgerMenu.classList.remove('open-menu');
+    body.classList.remove('dis-scroll');
+  })
+  const linkAction = () => {
+    const burgerMenu = document.getElementById('burger-menu');
+    burgerMenu.classList.remove('open-menu');
+    body.classList.remove('dis-scroll');
+  }
+  burgerLinks.forEach(n => n.addEventListener('click', linkAction));
 
   // ---------- UPLOAD DOCUMENT IN FILE INPUT ------------
   document.getElementById('cv_file').addEventListener('change', function() {
@@ -44,38 +110,3 @@ $(document).ready(function () {
   });
 
 });
-
-
-// fullpage customization
-$('#fullpage').fullpage({
-  sectionSelector: '.vertical-scrolling',
-  navigation: true,
-  slidesNavigation: true,
-  controlArrows: false,
-  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
-  menu: '#menu',
-
-  afterLoad: function(anchorLink, index) {
-    if (index == 5) {
-        $('#fp-nav').hide();
-      }
-  },
-
-  onLeave: function(index, nextIndex, direction) {
-    if(index == 5) {
-      $('#fp-nav').show();
-    }
-  },
-
-  afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
-    if(anchorLink == 'fifthSection' && slideIndex == 1) {
-      $.fn.fullpage.setAllowScrolling(false, 'up');
-    }
-  },
-
-  onSlideLeave: function( anchorLink, index, slideIndex, direction) {
-    if(anchorLink == 'fifthSection' && slideIndex == 1) {
-      $.fn.fullpage.setAllowScrolling(true, 'up');
-    }
-  } 
-}); 

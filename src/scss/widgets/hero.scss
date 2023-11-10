@@ -1,5 +1,7 @@
 .hero {
   color: var(--white-color);
+  background-position: center;
+  background-size: cover;
   &__container {
     display: flex;
     align-items: center;

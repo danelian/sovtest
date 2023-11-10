@@ -27,6 +27,16 @@
 }
 
 /***** Mixins *****/
+@media screen and (max-width: 1024px) {
+  :root {
+    --container-offset: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  :root {
+    --container-offset: 15px;
+  }
+}
 /***** BLOCKS GLOBAL *****/
 /*-----generals-----*/
 html {
@@ -551,8 +561,19 @@ th {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 500;
-  transition: position 10s ease-in, background-color 0.3s ease-in;
+  color: var(--white-color);
+  background-color: transparent;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease-in;
+}
+.header.active {
+  background-color: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+}
+.header.active .header__container {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
 }
 .header-main {
   padding: 3.646vw;
@@ -561,7 +582,153 @@ th {
   width: 9.583vw;
   flex-shrink: 0;
 }
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  width: 100%;
+}
+.header__container .logo {
+  width: 9.583vw;
+  flex-shrink: 0;
+  margin-right: 3.75vw;
+}
 
+.burger__open, .burger__close {
+  display: none;
+}
+.burger__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav__menu li {
+  padding: 0.625vw 1.25vw;
+}
+.nav__menu li a {
+  display: inline-flex;
+  font-size: 1.042vw;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+.nav__menu li a:hover {
+  color: var(--global-color);
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 1.25vw;
+}
+.nav__links a {
+  display: inline-flex;
+  font-size: 1.042vw;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--white-color);
+  transition: color 0.3s ease;
+}
+.nav__links a:hover {
+  color: var(--global-color);
+}
+.nav__links a:not(:first-child) {
+  margin-left: 2.5vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    background-color: rgba(217, 217, 217, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
+  .header-main {
+    padding: 3.646vw;
+  }
+  .header-main .logo {
+    width: 9.583vw;
+    flex-shrink: 0;
+  }
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    width: 100%;
+  }
+  .header__container .logo {
+    width: 9.583vw;
+    flex-shrink: 0;
+    margin-right: 3.75vw;
+  }
+  .burger__open, .burger__close {
+    display: none;
+  }
+  .burger__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav__menu li {
+    padding: 0.625vw 1.25vw;
+  }
+  .nav__menu li a {
+    display: inline-flex;
+    font-size: 1.042vw;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--white-color);
+    transition: color 0.3s ease;
+  }
+  .nav__menu li a:hover {
+    color: var(--global-color);
+  }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 1.25vw;
+  }
+  .nav__links a {
+    display: inline-flex;
+    font-size: 1.042vw;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--white-color);
+    transition: color 0.3s ease;
+  }
+  .nav__links a:hover {
+    color: var(--global-color);
+  }
+  .nav__links a:not(:first-child) {
+    margin-left: 2.5vw;
+  }
+}
 /*-----form-----*/
 .form {
   display: flex;
@@ -865,6 +1032,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 .hero {
   color: var(--white-color);
+  background-position: center;
+  background-size: cover;
 }
 .hero__container {
   display: flex;

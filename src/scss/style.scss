@@ -43,6 +43,17 @@
   }
 }
 
+@include tablet {
+  :root {
+    --container-offset: 20px;
+  }
+}
+@include mobile {
+  :root {
+    --container-offset: 15px;
+  }
+}
+
 
 /***** BLOCKS GLOBAL *****/
 @import "general";
