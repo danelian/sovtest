@@ -1,0 +1,114 @@
+.hero {
+  color: var(--white-color);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(60% - 25px);
+  }
+  &__content {
+    position: relative;
+    padding-left: 1.563vw;
+    &:not(:last-child) {
+      margin-bottom: 3.333vw;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 0;
+      width: 5px;
+      height: 100%;
+      border-radius: 10px;
+      background: var(--global-color);
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.125vw;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--white-color);
+  }
+  &__text {
+    margin-top: 1.250vw;
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.042vw;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--white-color);
+      &:not(:last-child) {
+        margin-bottom: 1vw;
+      }
+    }
+  }
+  &__benefits {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 1.458vw 1.042vw;
+    list-style: none;
+    border-radius: 5px;
+    background: rgba(217, 217, 217, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      &:not(:last-child) {
+        margin-right: 1.458vw;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: calc(100% + 0.729vw);
+          width: 1px;
+          height: 100%;
+          background: #61574F;
+        }
+      }
+      img {
+        width: 2.396vw;
+        height: 2.396vw;
+        margin-bottom: 1.250vw;
+        opacity: .2;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.042vw;
+        font-weight: 400;
+        line-height: 1.6;
+        color: var(--white-color);
+        span {
+          font-weight: 700;
+          display: block;
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(40% - 25px);
+  }
+  
+}

@@ -46,6 +46,7 @@
 
 /***** BLOCKS GLOBAL *****/
 @import "general";
+@import "blocks/fullpage.scss";
 @import "blocks/buttons";
 @import "blocks/title";
 
@@ -64,3 +65,4 @@
 
 /***** SECTIONS GLOBAL (Widgets) *****/
 @import "widgets/main.scss";
+@import "widgets/hero.scss";
