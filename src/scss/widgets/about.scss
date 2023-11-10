@@ -1,3 +1,4 @@
+/*-----about-----*/
 .about {
   position: relative;
   padding-bottom: 50px;
@@ -48,7 +49,7 @@
       margin-bottom: 0;
       font-size: 1.042vw;
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.5;
       color: var(--font-color);
       &:not(:last-child) {
         margin-bottom: 1vw;
@@ -69,7 +70,8 @@
     }
     &-content {
       width: 41.1vw;
-      padding: 1.250vw 1.250vw 1.250vw 0.833vw;
+      padding: 0 1.250vw 0 0.833vw;
+      margin-bottom: 1.250vw;
     }
   }
   &__second {
@@ -145,6 +147,171 @@
     .about__info {
       h2, h3 {
         margin-top: 0 !important;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .about {
+    padding-top: 50px;
+    &__illustration {
+      width: auto;
+      max-width: 30%;
+    }
+    &__content {
+      padding-left: 20px;
+      width: 80%;
+      margin-bottom: 40px;
+    }
+    &__title {
+      padding-left: 20px;
+      font-size: 30px;
+    }
+    &__text {
+      padding-left: 20px;
+      margin-top: 20px;
+      max-width: 570px;
+      p {
+        font-size: 18px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &__first {
+      &-content {
+        width: 80%;
+        padding-right: 0;
+        padding-left: 20px;
+        margin-bottom: 16px;
+      }
+      &-wrapper {
+        flex-direction: column;
+        width: 80%;
+      }
+    }
+    &__second {
+      width: 100%;
+    }
+    &__info {
+      width: 100%;
+      padding: 20px;
+    }
+    &__first-content,
+    &__info {
+      ul, p, h2, h3 {
+        margin-top: 0;
+        padding-left: 20px;
+        font-size: 18px;
+      }
+      ul:not(:last-child), p:not(:last-child), h2:not(:last-child), h3:not(:last-child) {
+        margin: 16px 0;
+      }
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+    &ImgSwiper {
+      margin: 20px 20px 20px 20px;
+      width: 290px;
+      height: 290px;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+      .swiper-pagination {
+        bottom: 10px;
+      }
+    }
+    &InfoSwiper {
+      padding-bottom: 36px;
+      .swiper-pagination {
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__illustration {
+      max-width: 90%;
+      opacity: .5;
+    }
+    &__content {
+      padding-left: 0;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+    &__title {
+      padding-left: 16px;
+      font-size: 24px;
+    }
+    &__text {
+      padding-left: 16px;
+      margin-top: 16px;
+      max-width: 570px;
+      p {
+        font-size: 16px;
+        line-height: 1.35;
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &__first {
+      max-width: 100%;
+      &-content {
+        width: 100%;
+        padding-left: 16px;
+      }
+      &-wrapper {
+        width: 100%;
+      }
+    }
+    &__info {
+      padding: 16px;
+    }
+    &__first-content,
+    &__info {
+      ul {
+        margin-top: 0;
+        padding-left: 16px;
+        font-size: 16px;
+      }
+      p, h2, h3 {
+        margin-top: 0;
+        padding-left: 0;
+        font-size: 16px;
+      }
+      ul:not(:last-child), p:not(:last-child), h2:not(:last-child), h3:not(:last-child) {
+        margin: 12px 0;
+      }
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+    &ImgSwiper {
+      margin: 16px 16px 16px 16px;
+      width: calc(100% - 32px);
+      height: 100%;
+    }
+    &InfoSwiper {
+      &::before {
+        display: none;
+      }
+      .swiper-slide {
+        width: 100%;
       }
     }
   }

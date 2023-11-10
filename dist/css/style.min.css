@@ -784,6 +784,13 @@ th {
   background-color: var(--global-color);
 }
 
+@media screen and (max-width: 1024px) {
+  .swiper-pagination-bullet {
+    margin: 0 2.5px;
+    width: 8px;
+    height: 8px;
+  }
+}
 /*-----form-----*/
 .form {
   display: flex;
@@ -994,8 +1001,8 @@ input[type=number]::-webkit-inner-spin-button {
     line-height: 18px;
   }
   .form textarea {
-    min-height: 44vw;
-    max-height: 400vw;
+    min-height: 44px;
+    max-height: 400px;
     height: 100px;
     padding: 14px 18px;
     font-size: 16px;
@@ -1167,6 +1174,7 @@ input[type=number]::-webkit-inner-spin-button {
   color: var(--white-color);
 }
 
+/*-----hero-----*/
 .hero {
   color: var(--white-color);
   background-position: center;
@@ -1390,6 +1398,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 28px;
   }
 }
+/*-----about-----*/
 .about {
   position: relative;
   padding-bottom: 50px;
@@ -1442,7 +1451,7 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 0;
   font-size: 1.042vw;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--font-color);
 }
 .about__text p:not(:last-child) {
@@ -1463,7 +1472,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .about__first-content {
   width: 41.1vw;
-  padding: 1.25vw 1.25vw 1.25vw 0.833vw;
+  padding: 0 1.25vw 0 0.833vw;
+  margin-bottom: 1.25vw;
 }
 .about__second {
   display: flex;
@@ -1531,4 +1541,150 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .aboutInfoSwiper .about__info h2, .aboutInfoSwiper .about__info h3 {
   margin-top: 0 !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    padding-top: 50px;
+  }
+  .about__illustration {
+    width: auto;
+    max-width: 30%;
+  }
+  .about__content {
+    padding-left: 20px;
+    width: 80%;
+    margin-bottom: 40px;
+  }
+  .about__title {
+    padding-left: 20px;
+    font-size: 30px;
+  }
+  .about__text {
+    padding-left: 20px;
+    margin-top: 20px;
+    max-width: 570px;
+  }
+  .about__text p {
+    font-size: 18px;
+  }
+  .about__text p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .about__first-content {
+    width: 80%;
+    padding-right: 0;
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  .about__first-wrapper {
+    flex-direction: column;
+    width: 80%;
+  }
+  .about__second {
+    width: 100%;
+  }
+  .about__info {
+    width: 100%;
+    padding: 20px;
+  }
+  .about__first-content ul, .about__first-content p, .about__first-content h2, .about__first-content h3, .about__info ul, .about__info p, .about__info h2, .about__info h3 {
+    margin-top: 0;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  .about__first-content ul:not(:last-child), .about__first-content p:not(:last-child), .about__first-content h2:not(:last-child), .about__first-content h3:not(:last-child), .about__info ul:not(:last-child), .about__info p:not(:last-child), .about__info h2:not(:last-child), .about__info h3:not(:last-child) {
+    margin: 16px 0;
+  }
+  .about__first-content ul li:not(:last-child), .about__info ul li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .aboutImgSwiper {
+    margin: 20px 20px 20px 20px;
+    width: 290px;
+    height: 290px;
+  }
+  .aboutImgSwiper:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .aboutImgSwiper .swiper-pagination {
+    bottom: 10px;
+  }
+  .aboutInfoSwiper {
+    padding-bottom: 36px;
+  }
+  .aboutInfoSwiper .swiper-pagination {
+    bottom: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .about__illustration {
+    max-width: 90%;
+    opacity: 0.5;
+  }
+  .about__content {
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .about__title {
+    padding-left: 16px;
+    font-size: 24px;
+  }
+  .about__text {
+    padding-left: 16px;
+    margin-top: 16px;
+    max-width: 570px;
+  }
+  .about__text p {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+  .about__text p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .about__first {
+    max-width: 100%;
+  }
+  .about__first-content {
+    width: 100%;
+    padding-left: 16px;
+  }
+  .about__first-wrapper {
+    width: 100%;
+  }
+  .about__info {
+    padding: 16px;
+  }
+  .about__first-content ul, .about__info ul {
+    margin-top: 0;
+    padding-left: 16px;
+    font-size: 16px;
+  }
+  .about__first-content p, .about__first-content h2, .about__first-content h3, .about__info p, .about__info h2, .about__info h3 {
+    margin-top: 0;
+    padding-left: 0;
+    font-size: 16px;
+  }
+  .about__first-content ul:not(:last-child), .about__first-content p:not(:last-child), .about__first-content h2:not(:last-child), .about__first-content h3:not(:last-child), .about__info ul:not(:last-child), .about__info p:not(:last-child), .about__info h2:not(:last-child), .about__info h3:not(:last-child) {
+    margin: 12px 0;
+  }
+  .about__first-content ul li:not(:last-child), .about__info ul li:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .aboutImgSwiper {
+    margin: 16px 16px 16px 16px;
+    width: calc(100% - 32px);
+    height: 100%;
+  }
+  .aboutInfoSwiper::before {
+    display: none;
+  }
+  .aboutInfoSwiper .swiper-slide {
+    width: 100%;
+  }
 }

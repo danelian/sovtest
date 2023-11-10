@@ -84,3 +84,11 @@
 //     background-color: transparent;
 //   }
 // }
+
+@include tablet {
+  .swiper-pagination-bullet {
+    margin: 0 2.5px;
+    width: 8px;
+    height: 8px;
+  }
+}

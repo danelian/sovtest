@@ -111,18 +111,34 @@ $(document).ready(function () {
 
   // ---------------------- SWIPER -----------------------
   var aboutImgSwiper = new Swiper(".aboutImgSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
   });
   var aboutInfoSwiper = new Swiper(".aboutInfoSwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      576: {
+        slidesPerView: "auto",
+        spaceBetween: 20
+      },
+    }
   });
 
 });
