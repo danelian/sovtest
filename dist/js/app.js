@@ -109,4 +109,20 @@ $(document).ready(function () {
     }
   });
 
+  // ---------------------- SWIPER -----------------------
+  var aboutImgSwiper = new Swiper(".aboutImgSwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  var aboutInfoSwiper = new Swiper(".aboutInfoSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
 });

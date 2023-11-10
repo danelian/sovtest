@@ -181,7 +181,8 @@
 
 @include mobile {
   .hero {
-    padding-top: 130px;
+    padding-top: 120px;
+    padding-bottom: 40px;
     &__content {
       padding-left: 16px;
       max-width: 100%;

@@ -71,9 +71,10 @@
 // @import "blocks/accordion";
 // @import "blocks/tabs";
 // @import "blocks/article";
-// @import "blocks/sliders";
+@import "blocks/sliders";
 @import "blocks/form";
 
 /***** SECTIONS GLOBAL (Widgets) *****/
 @import "widgets/main.scss";
 @import "widgets/hero.scss";
+@import "widgets/about.scss";

@@ -759,6 +759,31 @@ th {
   z-index: 1000;
 }
 
+.swiper {
+  max-width: 100%;
+  width: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* swiper-bullets styling */
+.swiper-pagination-bullet {
+  margin: 0 0.13vw;
+  width: 0.417vw;
+  height: 0.417vw;
+  background: #cbcbcb;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--global-color);
+}
+
 /*-----form-----*/
 .form {
   display: flex;
@@ -1322,7 +1347,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 @media screen and (max-width: 576px) {
   .hero {
-    padding-top: 130px;
+    padding-top: 120px;
+    padding-bottom: 40px;
   }
   .hero__content {
     padding-left: 16px;
@@ -1363,4 +1389,146 @@ input[type=number]::-webkit-inner-spin-button {
   .hero__right {
     margin-top: 28px;
   }
+}
+.about {
+  position: relative;
+  padding-bottom: 50px;
+}
+.about__illustration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60vw;
+  z-index: -1;
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.about__content {
+  padding-left: 1.563vw;
+  width: 41.667vw;
+  margin-bottom: 2.917vw;
+}
+.about__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.042vw;
+  font-size: 2.083vw;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--font-color);
+}
+.about__text {
+  position: relative;
+  padding-left: 1.042vw;
+  margin-top: 1.042vw;
+  max-width: 29.688vw;
+}
+.about__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--global-color);
+}
+.about__text p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.042vw;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--font-color);
+}
+.about__text p:not(:last-child) {
+  margin-bottom: 1vw;
+}
+.about__first {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.about__first-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 5px;
+  background: var(--lightGray-color);
+}
+.about__first-content {
+  width: 41.1vw;
+  padding: 1.25vw 1.25vw 1.25vw 0.833vw;
+}
+.about__second {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 52.083vw;
+}
+.about__info {
+  width: 41.1vw;
+  padding: 1.25vw 1.25vw 1.25vw 0.833vw;
+  border-radius: 5px;
+  background: var(--lightGray-color);
+}
+.about__first-content ul, .about__first-content p, .about__first-content h2, .about__first-content h3, .about__info ul, .about__info p, .about__info h2, .about__info h3 {
+  margin: 0;
+  padding-left: 1.25vw;
+  font-size: 1.042vw;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--font-color);
+}
+.about__first-content h2, .about__first-content h3, .about__info h2, .about__info h3 {
+  font-weight: 700;
+}
+.about__first-content ul:not(:last-child), .about__first-content p:not(:last-child), .about__first-content h2:not(:last-child), .about__first-content h3:not(:last-child), .about__info ul:not(:last-child), .about__info p:not(:last-child), .about__info h2:not(:last-child), .about__info h3:not(:last-child) {
+  margin: 1vw 0;
+}
+.about__first-content ul li::marker, .about__info ul li::marker {
+  font-size: 0.8em;
+}
+.about__first-content ul li:not(:last-child), .about__info ul li:not(:last-child) {
+  margin-bottom: 0.05vw;
+}
+.aboutImgSwiper {
+  margin: 1.25vw 0 1.25vw 1.25vw;
+  width: 9.375vw;
+  height: 9.375vw;
+  border-radius: 5px;
+}
+.aboutImgSwiper .swiper-slide,
+.aboutImgSwiper .swiper-slide img {
+  border-radius: 5px;
+}
+.aboutImgSwiper .swiper-pagination {
+  bottom: 0.521vw;
+}
+.aboutInfoSwiper {
+  padding-bottom: 2vw;
+}
+.aboutInfoSwiper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18%;
+  height: 100%;
+  background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 10;
+}
+.aboutInfoSwiper .swiper-slide {
+  width: 80%;
+}
+.aboutInfoSwiper .swiper-pagination {
+  bottom: 0.521vw;
+}
+.aboutInfoSwiper .about__info h2, .aboutInfoSwiper .about__info h3 {
+  margin-top: 0 !important;
 }
