@@ -410,6 +410,14 @@ th {
   cursor: auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .button {
+    padding: 14px 20px;
+    min-height: 44px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 /*-----title----*/
 .heading-row {
   display: flex;
@@ -658,6 +666,10 @@ th {
     background-color: rgba(217, 217, 217, 0.01);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+  }
+  .header.active .header__container {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .header-main {
     padding: 15px;
@@ -932,6 +944,88 @@ input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
+@media screen and (max-width: 1024px) {
+  .form {
+    width: 100%;
+  }
+  .form-wrapper {
+    padding: 32px 20px 24px 20px;
+    width: 100%;
+  }
+  .form-title {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-bottom {
+    width: 100%;
+  }
+  .form-input {
+    height: 44px;
+    padding: 14px 18px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .form textarea {
+    min-height: 44vw;
+    max-height: 400vw;
+    height: 100px;
+    padding: 14px 18px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .file-upload {
+    margin-right: 20px;
+  }
+  .file-input, .file-item {
+    width: 44px;
+    height: 44px;
+  }
+  .file-input:before, .file-item:before {
+    width: 22px;
+    height: 22px;
+  }
+  .file-input input {
+    width: 44px;
+    height: 44px;
+  }
+  .file-item {
+    margin-left: 16px;
+  }
+  .file-delete {
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+  }
+  .accept {
+    margin: 20px 0 0 0;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .form-wrapper {
+    padding: 24px 16px 20px 16px;
+  }
+  .form-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.15;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .form-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .form-bottom .button {
+    width: 100%;
+    margin-top: 14px;
+  }
+}
 /***** SECTIONS GLOBAL (Widgets) *****/
 .main {
   width: 100%;
@@ -1088,7 +1182,7 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 0;
   font-size: 3.125vw;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.15;
   color: var(--white-color);
 }
 .hero__text {
@@ -1162,4 +1256,111 @@ input[type=number]::-webkit-inner-spin-button {
   align-items: flex-start;
   justify-content: flex-start;
   width: calc(40% - 1.25vw);
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+  .hero__container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .hero__left {
+    width: 100%;
+  }
+  .hero__content {
+    padding-left: 20px;
+    max-width: 500px;
+  }
+  .hero__content:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .hero__content::before {
+    width: 4px;
+  }
+  .hero__title {
+    font-size: 40px;
+  }
+  .hero__text {
+    margin-top: 20px;
+  }
+  .hero__text p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .hero__text p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .hero__benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+    padding: 32px 20px;
+  }
+  .hero__benefits li:not(:last-child) {
+    margin-right: 0;
+  }
+  .hero__benefits li:not(:last-child)::before {
+    display: none;
+  }
+  .hero__benefits li img {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 24px;
+  }
+  .hero__benefits li p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .hero__right {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    padding-top: 130px;
+  }
+  .hero__content {
+    padding-left: 16px;
+    max-width: 100%;
+  }
+  .hero__content:not(:last-child) {
+    margin-bottom: 28px;
+  }
+  .hero__content::before {
+    width: 3px;
+  }
+  .hero__title {
+    font-size: 28px;
+  }
+  .hero__text {
+    margin-top: 16px;
+  }
+  .hero__text p {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+  .hero__text p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .hero__benefits {
+    gap: 24px 12px;
+    padding: 24px 16px;
+  }
+  .hero__benefits li img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 16px;
+  }
+  .hero__benefits li p {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .hero__right {
+    margin-top: 28px;
+  }
 }

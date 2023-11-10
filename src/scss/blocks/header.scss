@@ -107,6 +107,12 @@
     background-color: rgba(217, 217, 217, 0.01);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+    &.active {
+      .header__container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
     &-main {
       padding: 15px;
       .logo {
