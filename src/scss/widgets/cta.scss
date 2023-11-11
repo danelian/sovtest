@@ -1,0 +1,18 @@
+/*-----cta-----*/
+.cta {
+  padding-top: 1.563vw;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.500vw 2.500vw 2.500vw 6.5vw;
+    border-radius: 5px;
+    width: 100%;
+    .hero__title {
+      max-width: 720px;
+    }
+    .hero__right {
+      margin-top: -4.167vw;
+    }
+  }
+}

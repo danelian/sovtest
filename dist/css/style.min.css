@@ -655,6 +655,98 @@ th {
   z-index: 1000;
 }
 
+/*-----footer-----*/
+.footer {
+  margin-top: 4.167vw;
+  padding-top: 2.604vw;
+  padding-bottom: 1.875vw;
+  width: 100%;
+  color: var(--white-color);
+  background: var(--font-color);
+}
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 3.542vw;
+}
+.footer__top .logo {
+  width: 9.583vw;
+  flex-shrink: 0;
+  margin-right: 3.75vw;
+}
+.footer__top .logo img {
+  max-height: 100%;
+}
+.footer__top .nav__menu {
+  margin-right: auto;
+}
+.footer__top .phone {
+  color: var(--global-color);
+}
+.footer__top .phone:hover {
+  text-decoration: underline;
+}
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer__copy {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: fit-content;
+  flex-shrink: 0;
+  font-size: 1.042vw;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white-color);
+}
+.footer__copy a {
+  text-decoration: underline;
+}
+.footer__copy a:hover {
+  text-decoration: none;
+  color: var(--global-color);
+}
+.footer__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 1.042vw;
+  row-gap: 6px;
+}
+.footer__contacts li {
+  display: inline-flex;
+  column-gap: 6px;
+}
+.footer__contacts li:not(:first-child) {
+  margin-left: 2.5vw;
+}
+.footer__contacts li p {
+  margin: 0;
+}
+.footer__contacts li span {
+  color: #868686;
+}
+.footer__contacts li a {
+  text-decoration: none;
+}
+.footer__contacts li a:hover {
+  color: var(--global-color);
+}
+.footer__contacts li, .footer__contacts p, .footer__contacts span {
+  font-size: 1.042vw;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white-color);
+}
+
 .swiper {
   max-width: 100%;
   width: 100%;
@@ -1785,4 +1877,22 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 6px 16px;
     font-size: 16px;
   }
+}
+/*-----cta-----*/
+.cta {
+  padding-top: 1.563vw;
+}
+.cta__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5vw 2.5vw 2.5vw 6.5vw;
+  border-radius: 5px;
+  width: 100%;
+}
+.cta__wrapper .hero__title {
+  max-width: 720px;
+}
+.cta__wrapper .hero__right {
+  margin-top: -4.167vw;
 }
