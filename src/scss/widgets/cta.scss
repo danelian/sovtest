@@ -16,3 +16,36 @@
     }
   }
 }
+
+@include tablet {
+  .cta {
+    padding-top: 0;
+    &__wrapper {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 36px;
+      .hero__title {
+        max-width: 100%;
+      }
+      .hero__right {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .cta {
+    .container {
+      padding: 0;
+    }
+    &__wrapper {
+      padding: 40px 15px;
+      border-radius: 0;
+      .hero__right {
+        margin-top: 24px;
+      }
+    }
+  }
+}
