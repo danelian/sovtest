@@ -2068,3 +2068,83 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 24px;
   }
 }
+.errorpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 40px;
+}
+.errorpage__img {
+  width: 1790px;
+  max-width: calc(100% - 14px);
+  margin-bottom: 1.042vw;
+}
+.errorpage__title {
+  margin-top: 0;
+  margin-bottom: 1.2vw;
+  font-size: 2.604vw;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--font-color);
+}
+.errorpage__link {
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.25;
+  text-decoration: underline;
+  color: var(--global-color);
+}
+.errorpage__link:hover {
+  text-decoration: none;
+}
+.errorpage .logo {
+  position: absolute;
+  top: 3.646vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9.583vw;
+}
+.errorpage .logo img {
+  max-height: 100%;
+}
+
+.error404 .header {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .errorpage__img {
+    margin-bottom: 30px;
+  }
+  .errorpage__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .errorpage__link {
+    font-size: 18px;
+  }
+  .errorpage .logo {
+    top: 15px;
+    width: auto;
+    height: 44px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .errorpage__img {
+    margin-bottom: 20px;
+  }
+  .errorpage__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+  .errorpage__link {
+    font-size: 16px;
+  }
+  .errorpage .logo {
+    top: 12px;
+    height: 28px;
+  }
+}
