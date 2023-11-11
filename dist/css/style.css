@@ -75,6 +75,16 @@ body {
   height: 100vh;
 }
 
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -419,146 +429,25 @@ th {
   }
 }
 /*-----title----*/
-.heading-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 48px;
-}
-.heading-row .link {
-  margin-top: 16px;
-}
-
-.section-text {
+.section-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 2.083vw;
+  font-size: 2.083vw;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.section-text:not(:last-child) {
-  margin-bottom: 1rem;
-}
-.section-text p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.section-text p:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.default-wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  padding: 30px 20px;
-  border-radius: var(--border-radius);
-  background: var(--lightGrey-color);
-}
-.default-wrapper .quantity input {
-  background: var(--white-color);
-}
-.default-wrapper .select2-selection__rendered,
-.default-wrapper .select2-container .select2-selection--single,
-.default-wrapper .select2-container .select2-selection--single .select2-selection__rendered {
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.default-wrapper-dark {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  padding: 30px 20px;
-  border-radius: var(--border-radius);
-  background: radial-gradient(133.33% 133.33% at 50% 50%, #515158 0%, rgba(81, 81, 88, 0) 100%), #292932;
-}
-.default-wrapper-dark .link:hover {
-  color: var(--lightGrey-color);
-}
-.default-wrapper-dark .link:hover::before {
-  background-color: var(--lightGrey-color);
-}
-.default-wrapper-dark .link-input:hover {
-  color: var(--lightGrey-color);
-  border-color: var(--lightGrey-color);
-}
-.default-wrapper-dark .title-1, .default-wrapper-dark .title-2, .default-wrapper-dark .title-3, .default-wrapper-dark .title-4 {
-  color: var(--lightGrey-color);
-}
-
-.title-1 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.title-2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.title-3 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--font-color);
-}
-.title-4 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 17px;
   line-height: 1.2;
   color: var(--font-color);
 }
 
 @media screen and (max-width: 1024px) {
-  .heading-row {
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-  .section-text {
-    font-size: 16px;
-  }
-  .section-text:not(:last-child) {
-    margin-bottom: 0.7rem;
-  }
-  .section-text p:not(:last-child) {
-    margin-bottom: 0.7rem;
-  }
-  .title-1 {
-    font-size: 32px;
+  .section-title {
+    margin-bottom: 30px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 576px) {
-  .heading-row {
+  .section-title {
     margin-bottom: 24px;
-  }
-  .default-wrapper,
-.default-wrapper-dark {
-    padding: 24px 10px;
-  }
-  .title-1 {
     font-size: 24px;
-  }
-  .title-1,
-.title-2,
-.title-3,
-.title-4 {
-    text-align: left !important;
   }
 }
 /***** COMPONENTS GLOBAL *****/
@@ -1687,4 +1576,41 @@ input[type=number]::-webkit-inner-spin-button {
   .aboutInfoSwiper .swiper-slide {
     width: 100%;
   }
+}
+/*-----gallery-----*/
+.gallery {
+  padding-bottom: 50px;
+  background: var(--lightGray-color);
+}
+.gallerySwiper {
+  max-height: 65vh;
+  padding-bottom: 2vw;
+}
+.gallerySwiper .swiper-pagination {
+  bottom: 0.521vw;
+}
+.gallerySwiper .swiper-wrapper, .gallerySwiper .swiper-slide {
+  height: calc(65vh - 2vw);
+  max-height: calc(65vh - 2vw);
+}
+.gallerySwiper .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.gallery__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25vw 1.042vw;
+  height: 67vh;
+  max-height: 67vh;
+}
+.gallery__cards img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 41/36;
+  border-radius: 5px;
+  object-fit: cover;
+  max-height: calc((67vh - 1.25vw) / 2);
 }
