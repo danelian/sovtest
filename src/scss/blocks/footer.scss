@@ -1,6 +1,6 @@
 /*-----footer-----*/
 .footer {
-  margin-top: 4.167vw;
+  margin-top: auto;
   padding-top: 2.604vw;
   padding-bottom: 1.875vw;
   width: 100%;
@@ -92,7 +92,6 @@
 
 @include tablet {
   .footer {
-    margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 36px;
     &__top {
@@ -168,7 +167,6 @@
 
 @include mobile {
   .footer {
-    margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 28px;
     &__top {

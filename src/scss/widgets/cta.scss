@@ -1,5 +1,6 @@
 /*-----cta-----*/
 .cta {
+  margin-bottom: 4.167vw;
   padding-top: 1.563vw;
   &__wrapper {
     display: flex;
@@ -20,6 +21,7 @@
 @include tablet {
   .cta {
     padding-top: 0;
+    margin-bottom: 40px;
     &__wrapper {
       align-items: flex-start;
       justify-content: flex-start;

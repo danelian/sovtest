@@ -114,10 +114,11 @@
       }
     }
     &-main {
-      padding: 15px;
-      .logo {
-        width: auto;
-        height: 44px;
+      padding: 0;
+      position: relative;
+      background: var(--font-color);
+      &>.logo {
+        display: none;
       }
     }
     &__container {
