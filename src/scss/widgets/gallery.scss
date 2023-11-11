@@ -59,7 +59,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
       height: auto;
-      max-height: auto;
+      max-height: none;
       img {
         max-height: none;
       }

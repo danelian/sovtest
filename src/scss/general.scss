@@ -21,6 +21,9 @@ body {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
+.gallery .container {
+	padding: 0 calc(3.646vw + 2.500vw);
+}
 .link-center {
 	display: flex;
 	align-items: center;
@@ -33,6 +36,9 @@ body {
 @include tablet {
 	body {
 		font-size: 18px;
+	}
+	.gallery .container {
+		padding: 0 var(--container-offset);
 	}
 }
 @include mobile {
