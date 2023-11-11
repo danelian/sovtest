@@ -36,3 +36,43 @@
     }
   }
 }
+
+@include tablet {
+  .gallery {
+    padding-top: 50px;
+    &Swiper {
+      max-height: auto;
+      padding-bottom: 36px;
+      .swiper-pagination {
+        bottom: 10px;
+      }
+    }
+    &Swiper .swiper-wrapper,
+    &Swiper .swiper-slide {
+      height: auto;
+      max-height: auto;
+    }
+    &Swiper .swiper-slide img {
+      aspect-ratio: 54 / 70;
+    }
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      height: auto;
+      max-height: auto;
+      img {
+        max-height: none;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .gallery {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__cards {
+      gap: 10px;
+    }
+  }
+}

@@ -1614,3 +1614,41 @@ input[type=number]::-webkit-inner-spin-button {
   object-fit: cover;
   max-height: calc((67vh - 1.25vw) / 2);
 }
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    padding-top: 50px;
+  }
+  .gallerySwiper {
+    max-height: auto;
+    padding-bottom: 36px;
+  }
+  .gallerySwiper .swiper-pagination {
+    bottom: 10px;
+  }
+  .gallerySwiper .swiper-wrapper, .gallerySwiper .swiper-slide {
+    height: auto;
+    max-height: auto;
+  }
+  .gallerySwiper .swiper-slide img {
+    aspect-ratio: 54/70;
+  }
+  .gallery__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    height: auto;
+    max-height: auto;
+  }
+  .gallery__cards img {
+    max-height: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .gallery__cards {
+    gap: 10px;
+  }
+}
